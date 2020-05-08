@@ -3,16 +3,16 @@ import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native'
 
 
 
-export default function PlayerCard() {
-
+export default function PlayerCard(props) {
+console.log(props)
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-           <Image 
+           {/* <Image 
             style={styles.playerHead}
             source={{
             uri: 'https://www.hockeydb.com/ihdb/photos/sidney-crosby-2020-50.jpg',
-          }}/>
-          <Text style={styles.text}>Sidney Crosby</Text>
+          }}/> */}
+          <Text style={styles.text}>{props.player.fullName}</Text>
     </View>
   );
 }
@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
       fontSize: 30,
       marginTop: 10,
       marginRight: 100,
-      marginLeft: 30
-
+      marginLeft: 20
   }
 });
