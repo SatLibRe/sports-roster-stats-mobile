@@ -1,10 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+import Roster from "./containers/Roster.js"
 
 export default function App() {
+
+  const [rosterShown, setRosterShown] = useState(false)
+
+  const displayRoster = () => {
+    setRosterShown(!rosterShown)
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+        <TouchableHighlight onPress={displayRoster}>
+        <Image 
+            style={styles.pensLogo}
+            source={{
+            uri: 'https://www.logolynx.com/images/logolynx/ce/ce3fda47819cbae4635061d9dae31c6c.jpeg',
+          }}/>
+        </TouchableHighlight>
+        {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>}
+        {rosterShown ?  <Roster/> : null}
     </View>
   );
 }
@@ -12,8 +28,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  pensLogo: {
+    height: 100,
+    width: 100
+  },
+  logoText: {
+    marginTop: "10%",
+    color: "white",
+    fontStyle: "italic"
+  }
 });
