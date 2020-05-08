@@ -1,13 +1,12 @@
  import React, { useState } from 'react';
  import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
-
-
+ import PlayerCard from "../components/PlayerCard.js"
 
  export default function Roster() {
 
    return (
      <View>
-       <Text style={styles.text}> "hello" </Text>
+       <PlayerCard/>
      </View>
    );
  }
