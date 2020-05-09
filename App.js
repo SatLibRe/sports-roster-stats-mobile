@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
 import Roster from "./containers/Roster.js"
 
 export default function App() {
@@ -11,17 +11,19 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-        <TouchableHighlight onPress={displayRoster}>
-        <Image 
-            style={styles.pensLogo}
-            source={{
-            uri: 'https://www.logolynx.com/images/logolynx/ce/ce3fda47819cbae4635061d9dae31c6c.jpeg',
-          }}/>
-        </TouchableHighlight>
-        {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>}
-        {rosterShown ?  <Roster/> : null}
-    </View>
+    
+      <View style={styles.container}>
+          <TouchableHighlight onPress={displayRoster}>
+          <Image 
+              style={styles.pensLogo}
+              source={{
+              uri: 'https://www.logolynx.com/images/logolynx/ce/ce3fda47819cbae4635061d9dae31c6c.jpeg',
+            }}/>
+          </TouchableHighlight>
+          {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>}
+          {rosterShown ?  <Roster/> : null}
+      </View>
+    
   );
 }
 
@@ -33,6 +35,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   pensLogo: {
+    marginTop: "10%",
     height: 100,
     width: 100
   },

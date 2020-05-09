@@ -1,5 +1,5 @@
  import React, { useState, useEffect } from 'react';
- import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+ import { StyleSheet, Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
  import PlayerCard from "../components/PlayerCard.js"
 
  export default function Roster() {
@@ -15,9 +15,9 @@
   }, []);
 
    return (
-     <View>
+     <ScrollView>
        {roster.length > 0 && roster.map(player => <PlayerCard player={player.person}/>)}
-     </View>
+     </ScrollView>
    );
  }
 
