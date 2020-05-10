@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
+import styled from 'styled-components';
+import { Opacity } from 'react-native-motion';
 
 
 
@@ -39,10 +41,23 @@ const styles = StyleSheet.create({
       color: "white",
       fontSize: 30,
       marginTop: 10,
-      marginRight: 100,
-      marginLeft: 20
+      marginBottom: 10,
+      // marginRight: 100,
+      textAlign: "center"
+      // marginLeft: 20,
+      // borderWidth: 1,
+      // borderColor: "yellow",
+      // borderRadius: 6,
+      
   }, 
   playerClick: {
-    // underlayColor: "white"
+    // backgroundColor: "#FFFFFF70",
+    width: "90%",
+    marginLeft: 20,
+    borderWidth: 1,
+    borderColor: "yellow",
+    borderRadius: 6,
+    marginBottom: 10,
+    marginTop: 20,
   }
 });
