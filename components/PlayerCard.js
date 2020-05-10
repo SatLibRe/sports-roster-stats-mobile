@@ -40,22 +40,17 @@ const styles = StyleSheet.create({
   text: {
       color: "white",
       fontSize: 30,
+      fontStyle: "italic",
       marginTop: 10,
       marginBottom: 10,
-      // marginRight: 100,
       textAlign: "center"
-      // marginLeft: 20,
-      // borderWidth: 1,
-      // borderColor: "yellow",
-      // borderRadius: 6,
-      
   }, 
+
   playerClick: {
-    // backgroundColor: "#FFFFFF70",
     width: "90%",
     marginLeft: 20,
     borderWidth: 1,
-    borderColor: "yellow",
+    borderColor: "#ebe36570",
     borderRadius: 6,
     marginBottom: 10,
     marginTop: 20,
