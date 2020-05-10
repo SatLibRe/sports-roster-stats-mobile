@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
 import styled from 'styled-components';
 import { Opacity } from 'react-native-motion';
+import PlayerStats from "./PlayerStats.js"
 
 
 
@@ -16,8 +17,9 @@ export default function PlayerCard(props) {
             source={{
             uri: 'https://www.hockeydb.com/ihdb/photos/sidney-crosby-2020-50.jpg',
           }}/> */}
-          <TouchableOpacity style={styles.playerClick} onPress={() => console.log("hello")}>
+          <TouchableOpacity style={styles.playerClick} onPress={() => setStatsShown(!statsShown)}>
             <Text style={styles.text}> {props.player.fullName} </Text>
+              {statsShown ? <PlayerStats player={props.player}/> : null}
           </TouchableOpacity>
     </View>
   );
