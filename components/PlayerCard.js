@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
 
 export default function PlayerCard(props) {
-console.log(props)
+
+  const  [statsShown, setStatsShown] = useState(false)
+
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
            {/* <Image 
@@ -12,7 +14,9 @@ console.log(props)
             source={{
             uri: 'https://www.hockeydb.com/ihdb/photos/sidney-crosby-2020-50.jpg',
           }}/> */}
-          <Text style={styles.text}>{props.player.fullName}</Text>
+          <TouchableOpacity style={styles.playerClick} onPress={() => console.log("hello")}>
+            <Text style={styles.text}> {props.player.fullName} </Text>
+          </TouchableOpacity>
     </View>
   );
 }
@@ -37,5 +41,8 @@ const styles = StyleSheet.create({
       marginTop: 10,
       marginRight: 100,
       marginLeft: 20
+  }, 
+  playerClick: {
+    // underlayColor: "white"
   }
 });

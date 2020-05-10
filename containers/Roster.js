@@ -1,5 +1,6 @@
  import React, { useState, useEffect } from 'react';
  import { StyleSheet, Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
+ import { SharedElement, TranslateYAndOpacity } from 'react-native-motion';
  import PlayerCard from "../components/PlayerCard.js"
 
  export default function Roster() {
