@@ -20,6 +20,13 @@ export default function App() {
                   uri: 'https://www.logolynx.com/images/logolynx/ce/ce3fda47819cbae4635061d9dae31c6c.jpeg',
                 }}/>
             </TouchableHighlight>
+            <TouchableHighlight onPress={displayRoster}>
+              <Image 
+                  style={styles.pensLogo}
+                  source={{
+                  uri: 'https://1000logos.net/wp-content/uploads/2018/05/New-Jersey-Devils-Symbol.jpg',
+                }}/>
+            </TouchableHighlight>
               {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>}
               {rosterShown ?  <Roster/> : null}
         </View>
