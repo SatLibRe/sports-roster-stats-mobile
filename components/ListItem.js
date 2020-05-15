@@ -18,35 +18,28 @@ export default function ListItem(props) {
 
   return (
       //// IDs passed into displayRosterSetID are hardcoded from the API, this is not ideal but work around for event.target issue
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <TouchableHighlight onPress={()=> displayRosterSetId(props.imageAndId[1])}>
               <Image 
-                  style={styles.pensLogo}
+                  style={styles.teamLogo}
                   source={{
                   uri: props.imageAndId[0]
                 }}/>
             </TouchableHighlight>
-              {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>}
+              {/* {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>} */}
               {rosterShown ?  <Roster currTeamId={currTeamId}/> : null}
-        </View>
+        </ScrollView>
     );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignSelf: 'center',
+    // justifyContent: 'center',
   },
-  pensLogo: {
-    marginTop: "10%",
+  teamLogo: {
+    marginTop: 75,
     height: 100,
     width: 100
-  },
-  logoText: {
-    marginTop: "10%",
-    color: "white",
-    fontStyle: "italic"
   }
 });
