@@ -12,11 +12,6 @@ export default function PlayerCard(props) {
 
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-           {/* <Image 
-            style={styles.playerHead}
-            source={{
-            uri: 'https://www.hockeydb.com/ihdb/photos/sidney-crosby-2020-50.jpg',
-          }}/> */}
           <TouchableOpacity style={styles.playerClick} onPress={() => setStatsShown(!statsShown)}>
             <Text style={styles.text}> {props.player.fullName} </Text>
               {statsShown ? <PlayerStats player={props.player}/> : null}
