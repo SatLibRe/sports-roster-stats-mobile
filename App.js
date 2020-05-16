@@ -17,8 +17,13 @@ const imagesAndIds = [
 
   return (      
         <View style={styles.container}>
-          <Text style={styles.mainHeader}> Welcome to the NHL App</Text>
           <ScrollView style={styles.scrollStyle}>
+            <Image 
+                  style={styles.headerLogo}
+                  source={{
+                  uri: "https://www.stickpng.com/assets/images/5a4fbb7bda2b4f099b95da15.png"
+                }}/>
+          <Text style={styles.mainHeader}> Welcome to the NHL App</Text>
             {imagesAndIds.map(imageAndId => <ListItem imageAndId={imageAndId} />)}           
           </ScrollView>
         </View>
@@ -33,13 +38,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mainHeader: {
-    color: "white",
-    height: 100,
-    width: 100
+    color: "black",
+    alignSelf: 'center',
+    backgroundColor: "white",
+    marginTop: 75,
   },
   scrollStyle: {
     height: 200,
     width: "100%",
-    // backgroundColor:"white"
+    // backgroundColor:"white",
+    marginTop: 100
+  },
+  headerLogo: {
+    alignSelf: 'center',
+    height: 125,
+    width: 110,
+    marginTop: 75,
   }
 });
