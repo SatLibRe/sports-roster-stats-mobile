@@ -17,7 +17,8 @@ const imagesAndIds = [
 
   return (      
         <View style={styles.container}>
-          <ScrollView>
+          <Text style={styles.mainHeader}> Welcome to the NHL App</Text>
+          <ScrollView style={styles.scrollStyle}>
             {imagesAndIds.map(imageAndId => <ListItem imageAndId={imageAndId} />)}           
           </ScrollView>
         </View>
@@ -31,4 +32,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  mainHeader: {
+    color: "white",
+    height: 100,
+    width: 100
+  },
+  scrollStyle: {
+    height: 200,
+    width: "100%",
+    // backgroundColor:"white"
+  }
 });
