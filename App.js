@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight, ScrollView, FlatList } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome';
 import ListItem from "./components/ListItem.js"
 
 
@@ -27,6 +28,7 @@ const imagesAndIds = [
             <Text style={styles.subHeader}> 
               Scroll down and click on the logos below to see each teams' roster and stats for each current player based off of the 19/20 NHL Season.
             </Text>
+            <Icon onPress={() => console.log("hello")} style={styles.arrow} name="arrow-down" size={30} color="white" />
             {imagesAndIds.map(imageAndId => <ListItem imageAndId={imageAndId} />)}           
           </ScrollView>
         </View>
@@ -43,14 +45,18 @@ const styles = StyleSheet.create({
   mainHeader: {
     color: "white",
     alignSelf: 'center',
+    fontFamily: "Avenir-Roman",
+    fontStyle: "italic",
     marginTop: 45,
     marginBottom: 35,
   },
   subHeader: {
     color: "white",
     alignSelf: 'center',
+    fontFamily: "Avenir-Roman",
+    fontStyle: "italic",
     width: "80%",
-    marginBottom: 300,
+    marginBottom: 100,
     marginLeft: 45
   },
   scrollStyle: {
@@ -64,5 +70,9 @@ const styles = StyleSheet.create({
     height: 300,
     width: 500,
     marginTop: 75,
+  },
+  arrow: {
+    alignSelf: 'center',
+    marginBottom: 100,
   }
 });
