@@ -23,7 +23,10 @@ const imagesAndIds = [
                   source={{
                   uri: "https://www.stickpng.com/assets/images/5a4fbb7bda2b4f099b95da15.png"
                 }}/>
-            <Text style={styles.mainHeader}> Welcome to the NHL App</Text>
+            <Text style={styles.mainHeader}> Welcome to the NHL Aggergation App!</Text>
+            <Text style={styles.subHeader}> 
+              Scroll down and click on the logos below to see each teams' roster and stats for each current player based off of the 19/20 NHL Season.
+            </Text>
             {imagesAndIds.map(imageAndId => <ListItem imageAndId={imageAndId} />)}           
           </ScrollView>
         </View>
@@ -40,8 +43,15 @@ const styles = StyleSheet.create({
   mainHeader: {
     color: "white",
     alignSelf: 'center',
-    marginTop: 26,
+    marginTop: 45,
+    marginBottom: 35,
+  },
+  subHeader: {
+    color: "white",
+    alignSelf: 'center',
+    width: "80%",
     marginBottom: 300,
+    marginLeft: 45
   },
   scrollStyle: {
     height: 200,
