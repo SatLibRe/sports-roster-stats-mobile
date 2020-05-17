@@ -25,8 +25,7 @@ export default function ListItem(props) {
                   source={{
                   uri: props.imageAndId[0]
                 }}/>
-            </TouchableHighlight>
-              {/* {rosterShown ?  null : <Text style={styles.logoText}> Click the logo to display the current roster </Text>} */}
+            </TouchableHighlight>              
               {rosterShown ?  <Roster currTeamId={currTeamId}/> : null}
         </ScrollView>
     );
@@ -38,6 +37,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
   teamLogo: {
+    alignSelf: "center",
     marginTop: 75,
     height: 100,
     width: 100
