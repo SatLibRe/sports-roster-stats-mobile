@@ -12,7 +12,12 @@ const imagesAndIds = [
   ["https://i.ya-webdesign.com/images/new-york-islanders-logo-png-3.png", 2],
   ["https://www.stickpng.com/assets/images/5a4fbb92da2b4f099b95da18.png", 3], 
   ["https://cdn.freebiesupply.com/logos/large/2x/washington-capitals-1-logo-png-transparent.png", 15],
-  ["https://cdn.freebiesupply.com/logos/large/2x/carolina-hurricanes-logo.png",12]
+  ["https://cdn.freebiesupply.com/logos/large/2x/carolina-hurricanes-logo.png",12],
+  ["https://cdn.freebiesupply.com/logos/large/2x/boston-bruins-logo.png",6],
+  ["https://cdn.freebiesupply.com/logos/large/2x/montreal-canadiens-logo.png",8],
+  ["https://cdn.freebiesupply.com/logos/large/2x/buffalo-sabres-logo.png",7],
+  ["https://cdn.freebiesupply.com/logos/large/2x/ottawa-senators-logo.png", 9]
+
   
 ]
 
